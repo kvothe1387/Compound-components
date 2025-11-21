@@ -3,25 +3,25 @@ import ReactDOM from 'react-dom/client';
 import Menu from "./Menu/Menu";
 import MenuButton from './Menu/MenuButton';
 import MenuDropdown from './Menu/MenuDropdown';
+
 /**
  * Challenge:
- * 1. Convert the Menu component to use props.children 
- *    instead of taking an `items` prop. (We'll update 
- *    the MenuButton and MenuDropdown components later.) 
- *    See note inside the Menu.js file for more info
+ * 1. Convert the MenuButton to accept children and 
+ *    render them. (In this case, the children will
+ *    just be the button text)
+ * 2. Change the MenuButton below to pass "Sports"
+ *    in as a child of the component instead of by
+ *    using the `buttonText` prop.
  * 
- * 2. import MenuButton and MenuDropdown into THIS file
- *    and render them as children of the Menu component. 
- *    Remember to pass the buttonText and items array to 
- *    the components that need those props to function.
- *    (We'll also be updating that soon!)
+ * NOTE: It's fine that the menu is still broken, I
+ * promise we're getting there! 😃
  */
 
 function App() {
   return (
     <Menu>
-      <MenuButton buttonText="Sports" />
-      < MenuDropdown items={["Tennis", "Pickleball", "Racquetball", "Squash"]} />
+      <MenuButton>Sports</MenuButton>
+      <MenuDropdown items={["Tennis", "Pickleball", "Racquetball", "Squash"]} />
 
     </Menu>
   )
