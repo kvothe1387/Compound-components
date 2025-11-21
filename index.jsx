@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Menu from "./Menu/Menu";
-
+import MenuButton from './Menu/MenuButton';
+import MenuDropdown from './Menu/MenuDropdown';
 /**
  * Challenge:
  * 1. Convert the Menu component to use props.children 
@@ -14,21 +15,15 @@ import Menu from "./Menu/Menu";
  *    Remember to pass the buttonText and items array to 
  *    the components that need those props to function.
  *    (We'll also be updating that soon!)
- * 
- * NOTE: The functionality of the menu will be broken after 
- * these changes, but that's okay! As such, don't worry 
- * about moving the state or toggle function from the Menu; 
- * there's more we need to learn before we can do that.
  */
 
 function App() {
   return (
-    <>
-      <Menu
-        buttonText="Sports"
-        items={["Tennis", "Pickleball", "Racquetball", "Squash"]}
-      />
-    </>
+    <Menu>
+      <MenuButton buttonText="Sports" />
+      < MenuDropdown items={["Tennis", "Pickleball", "Racquetball", "Squash"]} />
+
+    </Menu>
   )
 }
 
