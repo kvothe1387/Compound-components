@@ -2,22 +2,10 @@ import React from "react"
 import MenuButton from "./MenuButton"
 import MenuDropdown from "./MenuDropdown"
 
-
-/**
- * Challenge:
- * Part 1:
- * 1. Create new context here in the Menu component. Make sure
- *    to export it from this file as well.
- * 2. Wrap the `div` below with the Context Provider
- * 3. Give the Provider a value of the boolean `false` (represents
- *    the hardcoded `open` state for now - we'll fix this very soon.)
- */
-
-
 const MenuContext = React.createContext()
 
 export default function Menu({ children }) {
-  const [open, setOpen] = React.useState(true)
+  const [open, setOpen] = React.useState(false)
 
   function toggle() {
     setOpen(prevOpen => !prevOpen)
@@ -25,7 +13,7 @@ export default function Menu({ children }) {
 
 
   return (
-    <MenuContext.Provider value={false}>
+    <MenuContext.Provider value={{ open, toggle }}>
       <div className="menu">
         {children}
       </div>
