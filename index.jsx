@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Menu from "./Menu/Menu"
+import MenuButton from './Menu/MenuButton';
+import MenuDropdown from './Menu/MenuDropdown';
 
 function App() {
   return (
-    <>
-      <Menu
-        buttonText="Sports"
-        items={["Tennis", "Racquetball", "Pickleball", "Squash"]}
-      />
-    </>
+
+    <Menu>
+      <MenuButton buttonText="Sports" />
+      <MenuDropdown items={["Tennis", "Racquetball", "Pickleball", "Squash"]} />
+    </Menu>
+
   )
 }
 
